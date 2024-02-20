@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chai Aur Code</title>
+    <style>
+      .parent {
+        background-color: #212121;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body class="parent"></body>
+  <script>
+    const title = document.createElement('h1');
+    title.className = 'title';
+    title.id = 'header';
+    title.style.backgroundColor = 'Pink';
+    title.style.color = 'black';
+    title.setAttribute('title', 'this is title');
+    const text = document.createTextNode('My name is Atharv');
+    title.appendChild(text);
+
+    document.body.appendChild(title);
+  </script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <ul class="language">
+      <li>Javascript</li>
+    </ul>
+  </body>
+  <script>
+    const lang = ['java', 'python', 'c++', 'javascript', 'dart', 'go', 'rust'];
+    lang.forEach(function addLanguage(langName) {
+      const Node = document.createElement('li');
+      Node.innerHTML = `${langName}`;
+      document.querySelector('.language').appendChild(Node);
+    });
+
+    // addLanguage('Python');
+
+    lang.forEach(function addOpti(langName) {
+      const Node = document.createElement('li');
+      Node.appendChild(document.createTextNode(langName));
+      document.querySelector('.language').appendChild(Node);
+    });
+
+    //Edit
+    const after = document.querySelector('li:nth-child(2)');
+    const secondLang = document.createElement('li');
+    secondLang.textContent = 'replacedLanguage';
+    after.replaceWith(secondLang);
+
+    //remove
+    const del = document.querySelector('li:first-child');
+    del.remove();
+  </script>
+</html>

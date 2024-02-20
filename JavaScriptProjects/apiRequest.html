@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #212121">
+    <div id="image">
+      <img src="" alt="" />
+    </div>
+    <div id="followers" style="color: white"></div>
+  </body>
+  <script>
+    const disFollower = document.querySelector('#followers');
+    const img = document.querySelector('img');
+    const user = 'https://api.github.com/users/hiteshchoudhary';
+    let follow;
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', user);
+    xhr.onreadystatechange = function () {
+      console.log(xhr.readyState);
+      if (xhr.readyState === 4) {
+        const data = JSON.parse(this.response);
+        console.log(data.followers);
+        follow = data.followers;
+        console.log(follow);
+        disFollower.innerHTML = `${follow}`;
+        img.setAttribute('src', `${data.avatar_url}`);
+      }
+    };
+    xhr.send();
+  </script>
+</html>

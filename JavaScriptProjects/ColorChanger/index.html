@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #212121">
+    <button>Change Color</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const button = document.querySelector('button');
+    const stop = document.querySelector('#stop');
+
+    function changeColor(number) {
+      const ran = Math.floor(Math.random() * (number + 1));
+      return ran;
+    }
+
+    // button.addEventListener('mouseout', () => {
+    //   const rndColor = `rgb(${changeColor(255)},${changeColor(
+    //     255
+    //   )},${changeColor(255)})`;
+    //   document.body.style.backgroundColor = rndColor;
+    // });
+    let cngBackground;
+    button.addEventListener('click', function () {
+      if (!cngBackground) {
+        cngBackground = setInterval(function () {
+          document.body.style.backgroundColor = `rgb(${changeColor(
+            255
+          )},${changeColor(255)},${changeColor(255)})`;
+        }, 1000);
+      }
+    });
+
+    stop.addEventListener('click', function () {
+      clearInterval(cngBackground);
+      cngBackground = null;
+    });
+  </script>
+</html>

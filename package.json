@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "node-fetch": "^2.7.0",
+    "promise.any": "^2.0.6"
+  }
+}
