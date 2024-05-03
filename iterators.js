@@ -41,9 +41,54 @@
 // }
 
 
-score = 11;
-do {
-    console.log(`Value is ${score}`)
-    score++;
-}while(score <= 10)
+// score = 11;
+// do {
+//     console.log(`Value is ${score}`)
+//     score++;
+// }while(score <= 10)
+
+
+// for (let i = 0; i <= 20; i++){
+//     if (i == 5) {
+//         continue;
+//     }
+//     console.log(`Number is ${i}`)
+// }
+
+let myArray = ['Batman', 'Flash', 'Superman', 'wonder women'];
+
+const dcHeros = {
+    hero1: "Batman",
+    hero2: "Superman",
+    hero3: "Flash",
+    hero4:"wonder women"
+}
+
+for (let hero of Object.keys(dcHeros)) {
+    console.log(hero);
+}
+
+
+
+// let arr = 0;
+// while (arr < myArray.length) {
+//     console.log(`Hero is ${myArray[arr]}`);
+//     arr++;
+// }
+
+// let score = 10
+
+// do {
+//     console.log(`Score is ${score}`);
+//     score++;
+// }while(score <= 10)
+
+// for (const hero of myArray) {
+//     console.log(hero);
+// }
+
+
+
+
+
 
