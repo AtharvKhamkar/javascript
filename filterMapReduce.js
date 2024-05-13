@@ -188,5 +188,33 @@ const shoppingCart = [
     },
 ]
 
-const result = shoppingCart.reduce((acc, curr) => acc + curr.price, 0)
-console.log(result)
+// const result = shoppingCart.reduce((acc, curr) => acc + curr.price, 0)
+// console.log(result)
+
+
+// const list = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+
+// const filteredList = list.filter((value) => {
+//     return value > 40;
+// })
+0
+// console.log(filteredList)
+
+// const list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+// const newList = list.map((value) => {
+//     return value * 10;})
+// .map((item) => {
+//     return item + 10
+//     })
+// .filter((item) => {
+//     return item > 500
+// })
+
+// console.log(newList);
+
+
+// const list = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+
+// const result = list.reduce((acc, value) => acc * value, 1);
+// console.log(result);

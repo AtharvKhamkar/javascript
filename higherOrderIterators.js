@@ -127,10 +127,23 @@ for (const key in map2) {
 // })
 
 
-const coding = ["ruby", "java", "js", "python"]
+// const coding = ["ruby", "java", "js", "python"]
 
-const result = coding.forEach((item) => {
-    console.log(item)
+// const result = coding.forEach((item) => {
+//     console.log(item)
+// })
+
+// console.log(result)
+
+const nums = [10, 20, 30, 40, 50]
+
+let total = 1;
+
+
+
+nums.forEach((value,index,nums)=> {
+    total *= value;
+    console.log(total,index,nums)
 })
 
-console.log(result)
+console.log(total);
